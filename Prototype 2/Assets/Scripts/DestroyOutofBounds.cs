@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class DestroyOutofBounds : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class DestroyOutofBounds : MonoBehaviour
         }
         else if(transform.position.z < lowerBound){
             Destroy(gameObject);
-            Debug.Log("Game Over!");
+            SceneManager.LoadScene("GameOver");
         }
     }
 }
